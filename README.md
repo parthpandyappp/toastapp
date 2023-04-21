@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/77fd236a-548b-433f-861e-6cd6994e0f30/deploy-status)](https://app.netlify.com/sites/parths-toast-app/deploys)
 # Toast App
 
 ### What's this all about?
