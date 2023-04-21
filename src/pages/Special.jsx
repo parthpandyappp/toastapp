@@ -19,12 +19,12 @@ const Special = () => {
   console.log("currentOrders: ", currentOrders);
 
   return (
-    <div className="flex flex-col grow h-full w-full p-2 pb-12">
+    <div className="flex flex-col grow h-full w-full p-2 pb-12  mt-28">
       <div className="relative w-full shadow-md">
         <img
           src={banner}
           alt=""
-          className="object-cover h-32 w-full rounded shadow"
+          className="object-cover h-32 w-full rounded shadow z-0"
         />
         <p className="absolute bottom-2 p-2 text-xl text-white font-bold w-36">
           Welcome to Sacred Earth

@@ -16,7 +16,7 @@ const ordersSlice = createSlice({
             state.currentOrders = [...state.currentOrders, action.payload]
         },
         moveToPreviosOrders: (state) => {
-            state.previousOrders = [...state.previousOrders, state.currentOrders]
+            state.previousOrders = [...state.previousOrders, ...state.currentOrders]
             state.currentOrders = []
         },
         incrementOrderQty: (state, action) => {

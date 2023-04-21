@@ -20,7 +20,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="flex flex-col gap-4 border px-2 pt-3 pb-0.5 rounded-md shadow-md">
+    <nav className="fixed top-0 w-full md:w-3/5 bg-[#f1f1f1] flex flex-col gap-4 border px-2 pt-3 pb-0.5 rounded-md shadow-md z-10">
       <section className="flex justify-between items-center ">
         <article className="flex gap-2 items-center">
           <p className="h-6 w-6 bg-black rounded-full"></p>

@@ -6,7 +6,7 @@ import {
   incrementOrderQty,
 } from "../features";
 
-const FinalOrder = ({ dish }) => {
+const CurrentOrder = ({ dish }) => {
   const dispatch = useDispatch();
   const { currentOrders } = useSelector((state) => state.orders);
   const qty = getQty(dish, currentOrders);
@@ -58,4 +58,4 @@ const FinalOrder = ({ dish }) => {
   );
 };
 
-export { FinalOrder };
+export { CurrentOrder };

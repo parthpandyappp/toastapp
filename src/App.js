@@ -9,7 +9,7 @@ function App() {
       <div className="flex flex-col min-h-screen md:w-3/5 w-full mx-auto ">
         {location.pathname !== "/placeorder" && <Nav />}
         <Routes />
-        <Footer />
+        {location.pathname !== "/placeorder" && <Footer />}
       </div>
     </div>
   );

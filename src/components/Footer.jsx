@@ -8,7 +8,7 @@ const Footer = () => {
   const { currentOrders } = useSelector((state) => state.orders);
 
   return (
-    <footer className="fixed bottom-0 w-full md:w-3/5 rounded bg-slate-100 flex-none text-center p-3">
+    <footer className="fixed bottom-0 w-full md:w-3/5 rounded bg-[#f1f1f1] flex-none text-center p-3">
       <section className="flex justify-between">
         <IoIosFlash className="text-2xl" />
         <BsBook className="text-2xl" />
