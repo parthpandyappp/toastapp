@@ -1,1 +1,5 @@
 export { Nav } from "./Nav"
+export { Footer } from "./Footer"
+export { DishCard } from "./DishCard"
+export { FinalOrder } from "./FinalOrder"
+export { MainDishCard } from "./MainDishCard"
