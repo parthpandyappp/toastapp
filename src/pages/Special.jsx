@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 const Special = () => {
   const dispatch = useDispatch();
   const { dishes, dishesLoading } = useSelector((state) => state.dishes);
+  const [isActive, setIsActive] = useState(false);
   const { currentOrders } = useSelector((state) => state.orders);
 
   const [toggle, setToggle] = useState(true);
@@ -30,17 +31,18 @@ const Special = () => {
           Welcome to Sacred Earth
         </p>
       </div>
-      <section className="flex gap-2 items-center p-2 my-2">
-        <p className="w-48 font-bold text-gray-600">Today's special</p>
+      <section
+        className={`group flex gap-2 items-center p-2 my-2 cursor-pointer active:text-[#3CBCB4]`}
+        onClick={() => setToggle(!toggle)}
+      >
+        <p className="w-36 font-semibold group-active:text-[#3CBCB4] text-gray-500 text-sm">
+          Today's special
+        </p>
         <span className="border-b-2 w-full"></span>
-        {toggle ? (
-          <AiFillCaretUp onClick={() => setToggle(!toggle)} />
-        ) : (
-          <AiFillCaretDown onClick={() => setToggle(!toggle)} />
-        )}
+        {toggle ? <AiFillCaretUp /> : <AiFillCaretDown />}
       </section>
       {toggle && (
-        <div className="flex flex-wrap w-full h-full items-stretch">
+        <div className="flex flex-wrap w-full h-full items-stretch ">
           {dishes
             .filter((dish) => dish.type === "special")
             .map((dish) => {

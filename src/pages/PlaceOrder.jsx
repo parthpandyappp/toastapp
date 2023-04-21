@@ -24,30 +24,32 @@ const PlaceOrder = () => {
     <div className="flex flex-col grow h-full w-full">
       <section className="flex justify-between border bg-[#f1f1f1] px-2 py-4 rounded-md z-10 fixed w-full md:w-3/5">
         <article className="flex gap-2 items-center">
-          <Link to="/" className="p-1 border rounded-md drop-shadow-xl">
+          <Link
+            to="/"
+            className="p-1 border rounded-md drop-shadow-xl active:shadow-inner"
+          >
             <BsArrowLeft className="text-2xl lg" />
           </Link>
           <p className="font-semibold text-lg">Place Order</p>
         </article>
       </section>
-      <section className="flex gap-2 items-center p-2 mt-20">
+      <section
+        className={`group flex gap-2 items-center p-2 my-2 cursor-pointer active:text-[#3CBCB4] mt-24`}
+        onClick={() => setCurrToggle(!currToggle)}
+      >
         <span className="relative">
-          <p className="w-32 font-bold text-gray-600">Current Order</p>
+          <p className="w-32 font-bold group-active:text-[#3CBCB4] text-gray-600">
+            Current Order
+          </p>
           <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-0 dark:border-gray-900">
             {currentOrders.length}
           </div>
         </span>
         <span className="border-b-2 w-full"></span>
         {currToggle ? (
-          <AiFillCaretUp
-            className="cursor-pointer"
-            onClick={() => setCurrToggle(!currToggle)}
-          />
+          <AiFillCaretUp className="cursor-pointer" />
         ) : (
-          <AiFillCaretDown
-            className="cursor-pointer"
-            onClick={() => setCurrToggle(!currToggle)}
-          />
+          <AiFillCaretDown className="cursor-pointer" />
         )}
       </section>
       {currentOrders.length > 0 && currToggle && (
@@ -60,9 +62,14 @@ const PlaceOrder = () => {
           </p>
         </section>
       )}
-      <section className="flex gap-2 items-center p-2 mt-2">
+      <section
+        className={`group flex gap-2 items-center p-2 my-2 cursor-pointer active:text-[#3CBCB4]`}
+        onClick={() => setPrevToggle(!prevToggle)}
+      >
         <span className="relative">
-          <p className="w-36 font-bold text-gray-600">Previous Orders</p>
+          <p className="w-36 font-bold group-active:text-[#3CBCB4] text-gray-600">
+            Previous Orders
+          </p>
           <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-0 dark:border-gray-900">
             {previousOrders.length}
           </div>

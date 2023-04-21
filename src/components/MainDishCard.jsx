@@ -11,7 +11,7 @@ const MainDishCard = ({ dish }) => {
   const { currentOrders } = useSelector((state) => state.orders);
   const qty = getQty(dish, currentOrders);
   return (
-    <section class="flex items-center gap-2 w-full shadow-inner rounded-md p-1 bg-gray-50">
+    <section class="flex items-center gap-2 w-full shadow-inner rounded-md p-1 bg-[#F6F6F6]">
       {dish.img.length > 0 && (
         <img src={dish.img} alt="" class="w-20 h-16 object-cover rounded" />
       )}
@@ -31,7 +31,7 @@ const MainDishCard = ({ dish }) => {
             <p className="text-sm font-bold text-gray-500">₹299</p>
           </span>
           {alreadyAdded(dish, currentOrders) ? (
-            <span class="flex gap-2 justify-center items-center border w-24 rounded-xl p-1 ">
+            <span class="flex gap-2 justify-center items-center border w-24 rounded-xl p-1 bg-[#F0F0F3] shadow-md">
               <p
                 class="flex items-center justify-center w-6 h-6 rounded-full shadow-inner text-[#3CBCB4] cursor-pointer"
                 onClick={() => dispatch(decrementOrderQty(dish))}
@@ -48,7 +48,7 @@ const MainDishCard = ({ dish }) => {
             </span>
           ) : (
             <button
-              class="flex gap-2 items-center border rounded-md text-sm p-1 font-bold text-gray-500 cursor-pointer"
+              class="flex gap-2 bg-[#F0F0F3] items-center border rounded-md text-sm p-1 font-bold text-gray-500 cursor-pointer shadow-md"
               onClick={() => dispatch(addToCurrentOrders({ ...dish, qty: 1 }))}
             >
               <p class="flex items-center justify-center w-6 h-6 rounded-full shadow-inner text-[#3CBCB4]">

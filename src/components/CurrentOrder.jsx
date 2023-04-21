@@ -28,7 +28,7 @@ const CurrentOrder = ({ dish }) => {
         </span>
       </span>
       {alreadyAdded(dish, currentOrders) ? (
-        <span class="flex gap-2 justify-center items-center border w-24 rounded-xl p-1 ">
+        <span class="flex gap-2 justify-center items-center border w-24 rounded-xl p-1 bg-[#F0F0F3] shadow-md">
           <p
             class="flex items-center justify-center w-6 h-6 rounded-full shadow-inner text-[#3CBCB4] cursor-pointer"
             onClick={() => dispatch(decrementOrderQty(dish))}
@@ -45,7 +45,7 @@ const CurrentOrder = ({ dish }) => {
         </span>
       ) : (
         <button
-          class="flex gap-2 items-center border rounded-md text-sm p-1 font-bold text-gray-500 cursor-pointer"
+          class="flex gap-2 bg-[#F0F0F3] items-center border rounded-md text-sm p-1 font-bold text-gray-500 cursor-pointer shadow-md"
           onClick={() => dispatch(addToCurrentOrders({ ...dish, qty: 1 }))}
         >
           <p class="flex items-center justify-center w-6 h-6 rounded-full shadow-inner text-[#3CBCB4]">

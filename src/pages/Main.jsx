@@ -16,14 +16,15 @@ const Main = () => {
 
   return (
     <div className="flex flex-col grow h-full w-full p-2 gap-2 pb-12 mt-28">
-      <section className="flex gap-2 items-center p-2 my-2">
-        <p className="w-32 font-bold text-gray-600">Acai Bowls</p>
+      <section
+        className={`group flex gap-2 items-center p-2 my-2 cursor-pointer active:text-[#3CBCB4]`}
+        onClick={() => setToggle(!toggle)}
+      >
+        <p className="w-24 font-bold group-active:text-[#3CBCB4] text-sm text-gray-600">
+          Acai Bowls
+        </p>
         <span className="border-b-2 w-full"></span>
-        {toggle ? (
-          <AiFillCaretUp onClick={() => setToggle(!toggle)} />
-        ) : (
-          <AiFillCaretDown onClick={() => setToggle(!toggle)} />
-        )}
+        {toggle ? <AiFillCaretUp /> : <AiFillCaretDown />}
       </section>
       {toggle &&
         acaibowls

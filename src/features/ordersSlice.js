@@ -20,28 +20,26 @@ const ordersSlice = createSlice({
             state.currentOrders = []
         },
         incrementOrderQty: (state, action) => {
-            console.log(action.payload.id)
-            state.currentOrders = state.currentOrders.map((order) => {
-                if (order.id === action.payload.id) {
-                    return { ...order, qty: order.qty + 1 }
-                }
-                return order
-            })
+            const { id } = action.payload;
+            const orderIndex = state.currentOrders.findIndex(
+                (order) => order.id === id
+            );
+            if (orderIndex !== -1) {
+                state.currentOrders[orderIndex].qty += 1;
+            }
         },
         decrementOrderQty: (state, action) => {
-            console.log(action.payload.id)
-            state.currentOrders = state.currentOrders.map((order) => {
-                if (order.id === action.payload.id) {
-                    if (order.qty - 1 === 0) {
-                        state.currentOrders = state.currentOrders.filter((d) => d.id !== action.payload.id)
-                    }
-                    else {
-                        return { ...order, qty: order.qty - 1 }
-                    }
+            const { id } = action.payload;
+            const orderIndex = state.currentOrders.findIndex(
+                (order) => order.id === id
+            );
+            if (orderIndex !== -1) {
+                state.currentOrders[orderIndex].qty -= 1;
+                if (state.currentOrders[orderIndex].qty < 1) {
+                    state.currentOrders.splice(orderIndex, 1);
                 }
-                return order
-            })
-        }
+            }
+        },
     }
 })
 
