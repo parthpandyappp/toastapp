@@ -7,15 +7,17 @@ The project is a result of the frontend task assigned by the Toast app. It's a R
 ### How it stands out?
 1. Highly scalable folder structure.
 2. Modular code, more components.
-3. Implementation of ***Barrels*** in ReactJs.
-4. Up to date ***version control*** with `git`
-5. Proper ***segregation*** of `components` and `pages` in the application.
+3. Animations using `framer-motion`.
+4. Implementation of ***Barrels*** in ReactJs.
+5. Up to date ***version control*** with `git`
+6. Proper ***segregation*** of `components` and `pages` in the application.
 
 ### Tech stack
 1. ReactJs
 2. TailwindCss
 3. React-Redux
-4. Reduxjs toolkit
+4. Framer motion
+5. Reduxjs toolkit
 
 ### Early preview
 ![sc-home](https://user-images.githubusercontent.com/34797335/233628586-35d112d8-92cd-4b8e-b156-6b7b38d8f584.png)
