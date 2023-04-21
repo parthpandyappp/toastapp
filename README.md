@@ -3,7 +3,7 @@
 ### What's this all about?
 The project is a result of the frontend task assigned by the Toast app. It's a React app, designed pixel perfect in accordance with the given figma design viewable with ease in any mobile device.
 
-### How it still stands out?
+### How it stands out?
 1. Highly scalable folder structure.
 2. Modular code, more components.
 3. Implementation of ***Barrels*** in ReactJs.
