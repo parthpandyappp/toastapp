@@ -17,7 +17,7 @@ const DishCard = ({ dish }) => {
     <section class="w-1/2 p-1 h-full">
       <div class="group active:opacity-25 flex flex-col border shadow-inner rounded-lg mx-auto bg-[#F6F6F6]">
         <img src={dish.img} className="h-36 object-cover rounded-lg" alt="" />
-        <span class="flex items-center gap-2 p-2">
+        <span class="flex items-center gap-2 p-2 h-12">
           <p
             class={`border-2 w-6 h-6 flex items-center justify-center rounded ${
               dish.isVeg
@@ -27,7 +27,7 @@ const DishCard = ({ dish }) => {
           >
             •
           </p>
-          <p class="text-sm font-bold text-gray-500">{dish.item}</p>
+          <p class="text-sm font-bold text-gray-500 ">{dish.item}</p>
         </span>
         <span class="flex justify-between p-2 items-center">
           <p class="font-semibold text-sm text-gray-500">₹{dish.price}</p>

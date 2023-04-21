@@ -12,7 +12,7 @@ const Beverages = () => {
   }, []);
   return (
     <div className="flex flex-col grow h-full w-full mt-28">
-      <div className="flex flex-wrap w-full border p-1">
+      <div className="flex flex-wrap w-full  p-1">
         {dishes
           .filter((dish) => dish.type === "beverage")
           .map((dish) => {
