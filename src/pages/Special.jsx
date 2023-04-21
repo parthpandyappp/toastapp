@@ -5,13 +5,11 @@ import { getAllDishes } from "../features";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { FiLoader } from "react-icons/fi";
 import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
 const Special = () => {
   const dispatch = useDispatch();
   const { dishes, dishesLoading } = useSelector((state) => state.dishes);
-  const [isActive, setIsActive] = useState(false);
-  const { currentOrders } = useSelector((state) => state.orders);
-
   const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
@@ -27,7 +25,11 @@ const Special = () => {
         </span>
       ) : (
         <>
-          <div className="relative w-full shadow-md">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+            className="relative w-full shadow-md"
+          >
             <img
               src={banner}
               alt={banner}
@@ -36,7 +38,7 @@ const Special = () => {
             <p className="absolute bottom-2 p-2 text-xl text-white font-bold w-36">
               Welcome to Sacred Earth
             </p>
-          </div>
+          </motion.div>
           <section
             className={`group flex gap-2 items-center p-2 my-2 cursor-pointer active:text-[#3CBCB4]`}
             onClick={() => setToggle(!toggle)}
