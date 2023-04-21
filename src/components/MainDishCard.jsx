@@ -30,7 +30,7 @@ const MainDishCard = ({ dish }) => {
             </p>
             <p className="text-sm font-bold text-gray-500">₹299</p>
           </span>
-          {alreadyAdded(dish, currentOrders) ? (
+          {qty > 0 ? (
             <span class="flex gap-2 justify-center items-center border w-24 rounded-xl p-1 bg-[#F0F0F3] shadow-md">
               <p
                 class="flex items-center justify-center w-6 h-6 rounded-full shadow-inner text-[#3CBCB4] cursor-pointer"
