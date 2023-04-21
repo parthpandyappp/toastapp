@@ -1,2 +1,1 @@
-export { overviewdata } from "./overviewdata"
-export { salesdata } from "./salesdata"
+export { acaibowls, dishes } from "./dishes"

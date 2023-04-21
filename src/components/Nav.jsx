@@ -2,6 +2,7 @@ import { CgHashtag } from "react-icons/cg";
 import { MdRecordVoiceOver } from "react-icons/md";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import cafe from "../assets/cafe.png";
 
 const horizontalNavigation = [
   { value: "Special", route: "/" },
@@ -20,10 +21,11 @@ const Nav = () => {
   };
 
   return (
-    <nav className="flex flex-col gap-4 p-2">
-      <section className="flex justify-between items-center">
+    <nav className="fixed top-0 w-full md:w-3/5 bg-[#f1f1f1] flex flex-col gap-4 border px-2 pt-3 pb-0.5 rounded-md shadow-md z-10">
+      <section className="flex justify-between items-center ">
         <article className="flex gap-2 items-center">
-          <p className="h-6 w-6 bg-black rounded-full"></p>
+          {/* <p className="h-6 w-6 bg-black rounded-full"></p> */}
+          <img className="h-8 w-8" src={cafe} alt="" />
           <p className="font-semibold text-lg">Sacred Earth Cafe</p>
         </article>
         <article className="flex gap-2 items-center">
@@ -31,7 +33,7 @@ const Nav = () => {
             <MdRecordVoiceOver className="text-2xl" />
           </span>
           <span className="p-1 border rounded-md drop-shadow-xl">
-            <CgHashtag className="text-2xl" />
+            <CgHashtag className="text-2xl lg" />
           </span>
         </article>
       </section>
@@ -41,7 +43,7 @@ const Nav = () => {
             key={nav.value}
             className={`w-1/4 text-center p-1 cursor-pointer font-bold ${
               activeTab === nav.value
-                ? "border-b-4 border-indigo-500 text-indigo-500"
+                ? "border-b-2 border-[#3CBCB4] text-[#3CBCB4]"
                 : "text-gray-500 "
             }`}
             onClick={() => handleNavChange(nav)}
