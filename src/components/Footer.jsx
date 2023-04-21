@@ -14,7 +14,7 @@ const Footer = () => {
         <BsBook className="text-2xl" />
         <Link to="/placeorder" className="relative">
           <FiShoppingBag className="text-2xl" />
-          <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-3 dark:border-gray-900">
+          <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-3 dark:border-gray-900">
             {currentOrders.length}
           </div>
         </Link>
